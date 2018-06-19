@@ -1,3 +1,5 @@
+
+
 compute = function(input_string) {
   values = unlist(strsplit(input_string, ' '))
   num0 = as.integer(values[1])
@@ -5,9 +7,10 @@ compute = function(input_string) {
   num1 = as.integer(values[3])
   if (operator == '+') {
     return(num0 + num1)
-  } else if (operator =='-') {
+  } else if (operator == '-') {
+    return(num0 - num1)
+  } else {
     print('unknown operator!')
     return(NA)
   }
 }
-
