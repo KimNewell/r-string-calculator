@@ -5,7 +5,7 @@ compute = function(input_string) {
   num1 = as.integer(values[3])
   if (operator == '+') {
     return(num0 + num1)
-  } else {
+  } else if (operator =='-') {
     print('unknown operator!')
     return(NA)
   }
