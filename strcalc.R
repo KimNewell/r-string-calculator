@@ -1,3 +1,5 @@
+ # Perform simple arithmetic encoded in input string
+  # e.g. '1 + 2' -> 3, or '1 - 2' -> -1
 compute = function(input_string) {
   values = unlist(strsplit(input_string, ' '))
   num0 = as.integer(values[1])
@@ -6,5 +8,9 @@ compute = function(input_string) {
   result = switch(operator,
                   '+' = num0 + num1,
                   '-' = num0 - num1)
+
+ if (is.na(result)) {
+    print('unknown operator!')
+  }
   return(result)
 }
